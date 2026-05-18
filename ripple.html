@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto Ripple - Martina XV</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#1f143e] flex h-screen items-center justify-center overflow-hidden">
+
+    <div class="relative flex h-96 w-96 items-center justify-center">
+
+        <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 200 200">
+            <defs>
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="2" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+            </defs>
+
+            <circle class="ripple-ring" cx="100" cy="100" r="50" fill="none" stroke="#B2FFFF" stroke-width="1.5"
+                filter="url(#glow)" />
+            <circle class="ripple-ring" cx="100" cy="100" r="50" fill="none" stroke="#B2FFFF" stroke-width="1.5"
+                filter="url(#glow)" />
+            <circle class="ripple-ring" cx="100" cy="100" r="50" fill="none" stroke="#B2FFFF" stroke-width="1.5"
+                filter="url(#glow)" />
+        </svg>
+
+        <div id="butterfly-container" class="z-10 flex flex-col items-center justify-center cursor-pointer select-none">
+
+            <svg class="w-20 h-20 text-[#b2ffff] drop-shadow-[0_0_15px_rgba(178,255,255,0.6)]" viewBox="0 0 100 100"
+                fill="currentColor">
+                <path id="wing-left" d="M50,50 C40,20 10,25 20,45 C25,55 45,55 50,50 Z" />
+                <path id="wing-right" d="M50,50 C60,20 90,25 80,45 C75,55 55,55 50,50 Z" />
+                <path d="M48,35 C48,33 52,33 52,35 L51,65 C51,66 49,66 49,65 Z" fill="#ffd1dc" />
+            </svg>
+
+            <h1
+                class="text-[#b2ffff] font-serif tracking-widest text-xl mt-4 bg-[#1f143e]/80 px-4 py-1 rounded-full backdrop-blur-sm">
+                MARTINA
+            </h1>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script>
+        // 1. Configuramos el punto de pivote para que escalen desde su propio centro
+        gsap.set(".ripple-ring", { transformOrigin: "50% 50%", scale: 0, opacity: 0 });
+        gsap.set("#wing-left", { transformOrigin: "right center" });
+        gsap.set("#wing-right", { transformOrigin: "left center" });
+
+        // 2. Animación en bucle del Ripple (Efecto gota de agua continuo)
+        const rippleAnimation = gsap.fromTo(".ripple-ring",
+            {
+                scale: 0.3,
+                opacity: 0.8,
+                strokeWidth: 3
+            },
+            {
+                scale: 2.2,          // Qué tanto se expande el círculo
+                opacity: 0,          // Se desvanece al expandirse
+                strokeWidth: 0.5,    // Se afina la línea al alejarse
+                duration: 3,         // Tiempo que tarda cada onda en morir
+                ease: "power1.out",
+                stagger: {
+                    each: 1,         // Tiempo de espera entre que sale una onda y la siguiente
+                    repeat: -1       // Bucle infinito para el stagger
+                }
+            }
+        );
+
+        // 3. Sincronización con el aleteo de la mariposa
+        // Hacemos que las alitas se muevan rápido simulando el impulso que genera el ripple
+        gsap.to("#wing-left", { rotationY: 60, duration: 0.15, repeat: -1, yoyo: true, ease: "sine.inOut" });
+        gsap.to("#wing-right", { rotationY: -60, duration: 0.15, repeat: -1, yoyo: true, ease: "sine.inOut" });
+
+        // BONUS: Si el usuario hace clic en la mariposa, genera un "pulso" extra rápido
+        document.getElementById('butterfly-container').addEventListener('click', () => {
+            gsap.fromTo(".ripple-ring",
+                { scale: 0.3, opacity: 1 },
+                { scale: 2.5, opacity: 0, duration: 1.2, ease: "power2.out", overwrite: "auto" }
+            );
+            // Al terminar el pulso del clic, reiniciamos el bucle suave
+            setTimeout(() => { rippleAnimation.restart(); }, 1200);
+        });
+    </script>
+</body>
+
+</html>

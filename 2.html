@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>XV de Martina - Invitación de Quinceañera</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Metropolis:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#004f50",
+                        "on-secondary-container": "#7a5761",
+                        "surface-container-low": "#f8f1ff",
+                        "on-primary": "#ffffff",
+                        "background": "#fdf7ff",
+                        "secondary-fixed": "#ffd9e2",
+                        "inverse-primary": "#87d3d4",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#e5deff",
+                        "on-primary-container": "#277979",
+                        "on-secondary-fixed": "#2d141c",
+                        "on-tertiary-fixed": "#1c1735",
+                        "surface-container": "#f3eaff",
+                        "surface-variant": "#e8ddff",
+                        "inverse-on-surface": "#f5eeff",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#6f7979",
+                        "surface-dim": "#e0d4ff",
+                        "primary-fixed": "#a3f0f0",
+                        "primary": "#0d696a",
+                        "surface-container-highest": "#e8ddff",
+                        "inverse-surface": "#342954",
+                        "secondary-container": "#ffd1dc",
+                        "on-tertiary-container": "#6f698c",
+                        "tertiary-fixed-dim": "#c9c2e8",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#78555e",
+                        "tertiary": "#605a7c",
+                        "surface-tint": "#0d696a",
+                        "surface-bright": "#fdf7ff",
+                        "on-surface-variant": "#3f4948",
+                        "surface-container-high": "#ede4ff",
+                        "on-surface": "#1f143e",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#5e3e47",
+                        "outline-variant": "#bec9c8",
+                        "surface": "#fdf7ff",
+                        "tertiary-container": "#f5efff",
+                        "on-background": "#1f143e",
+                        "on-tertiary-fixed-variant": "#484363",
+                        "on-primary-fixed": "#002020",
+                        "primary-container": "#b2ffff",
+                        "secondary-fixed-dim": "#e7bbc6",
+                        "primary-fixed-dim": "#87d3d4",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding-mobile": "24px",
+                        "section-gap": "48px",
+                        "gutter": "16px",
+                        "container-padding-desktop": "64px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Metropolis"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-lg": ["Metropolis"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-sm": ["Metropolis"],
+                        "body-lg": ["Metropolis"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .pastel-gradient-bg {
+            background: linear-gradient(135deg,
+                    #b2ffff 0%,
+                    /* Celeste Agua */
+                    #e5deff 50%,
+                    /* Soft Lavender */
+                    #ffd1dc 100%
+                    /* Pastel Pink */
+                );
+            background-attachment: fixed;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .shadow-ethereal {
+            box-shadow: 0 12px 40px rgba(0, 79, 80, 0.08);
+        }
+
+        .butterfly-glow {
+            filter: drop-shadow(0 0 12px rgba(13, 105, 106, 0.4));
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md pastel-gradient-bg min-h-screen">
+    <!-- Top Navigation Shell -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/40 backdrop-blur-xl border-b border-white/20 shadow-[0_4px_30px_rgba(0,79,80,0.05)]">
+        <div
+            class="flex justify-between items-center px-container-padding-mobile md:px-container-padding-desktop h-16 w-full max-w-[1200px] mx-auto">
+            <div class="flex items-center gap-2 transition-all duration-300 ease-in-out">
+                <span class="material-symbols-outlined text-primary" data-icon="flutter_dash">flutter_dash</span>
+                <span class="font-display-lg text-headline-md tracking-tighter text-on-surface">XV de Martina</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span
+                    class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-opacity cursor-pointer"
+                    data-icon="account_circle">account_circle</span>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-24 pb-32 px-container-padding-mobile max-w-[1200px] mx-auto space-y-section-gap">
+        <!-- Dress Code Section (Visual Anchor) -->
+        <section class="flex flex-col items-center text-center space-y-unit" id="Dress">
+            <div
+                class="w-20 h-20 rounded-full bg-white/60 flex items-center justify-center mb-4 shadow-ethereal backdrop-blur-md border border-white/40">
+                <span class="material-symbols-outlined text-secondary !text-4xl" data-icon="apparel">apparel</span>
+            </div>
+            <h2
+                class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface drop-shadow-sm">
+                Código de Vestimenta</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto">
+                Acompáñanos con tu vestimenta más <span class="font-bold text-secondary">Formal y Elegante</span>.
+                ¡Estamos ansiosos por ver tu estilo único!
+            </p>
+            <div class="mt-6 flex gap-3">
+                <span
+                    class="px-5 py-2 rounded-full bg-white/60 text-on-primary-container font-label-lg text-label-lg border border-white/50 shadow-sm backdrop-blur-sm">Gala
+                    Opcional</span>
+                <span
+                    class="px-5 py-2 rounded-full bg-white/60 text-on-primary-container font-label-lg text-label-lg border border-white/50 shadow-sm backdrop-blur-sm">Vestidos
+                    Elegantes</span>
+            </div>
+        </section>
+        <!-- Bento Grid for Map and Gifts -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+            <!-- Event Location Section -->
+            <section
+                class="glass-card rounded-xl p-8 flex flex-col justify-between shadow-ethereal overflow-hidden relative min-h-[420px]"
+                id="Event">
+                <div>
+                    <h3 class="font-headline-md text-headline-md text-on-surface mb-2">La Celebración</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">Villa de las Flores, Serenity
+                        Gardens</p>
+                </div>
+                <div class="relative w-full h-52 rounded-lg overflow-hidden mb-6 shadow-inner">
+                    <img class="w-full h-full object-cover brightness-95 contrast-90"
+                        data-alt="A minimalist architectural landscape featuring a contemporary villa with clean white lines and lush manicured gardens under a soft, ethereal pastel sky."
+                        data-location="Villa de las Flores"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8kY6okGE7HTabS2roAauqhtkd8rsICCwBn3sCeUw_Uzad412Gj77UI5bxwaUNS7PLTYalIEQETBdBXTTsZjg07heYvbZwT6UeC-Yu8ULtLZhgvH1QxsQ-by_Pjw33pAfBvxzymGiX-fHoAhoGvsVRoJIMPlrl6sBXX1ooYeF1P0bKhEJX4rrvcIrgbVDBHPiDfZYaYNBDjHtYNM5JFztfQMCbh433IQwepB-Kpx0S22uMoimoEj8I5rtorwIo26XQ-6TZ4VjvV4KC" />
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="bg-primary p-4 rounded-full shadow-lg butterfly-glow">
+                            <span class="material-symbols-outlined text-white !text-3xl"
+                                data-icon="location_on">location_on</span>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="w-full py-4 rounded-xl bg-primary text-white font-label-lg text-label-lg hover:brightness-110 shadow-lg transition-all flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined" data-icon="near_me">near_me</span>
+                    CÓMO LLEGAR
+                </button>
+            </section>
+            <!-- Gift Section -->
+            <section
+                class="glass-card rounded-xl p-8 flex flex-col justify-center items-center text-center shadow-ethereal"
+                id="Gifts">
+                <div class="mb-6">
+                    <span
+                        class="material-symbols-outlined text-white !text-5xl mb-4 bg-primary rounded-full p-5 shadow-lg"
+                        data-icon="featured_seasonal_and_gifts"
+                        style="font-variation-settings: 'FILL' 1;">featured_seasonal_and_gifts</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Mesa de Regalos</h3>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-sm">
+                    Tu presencia es el mayor regalo de todos. Sin embargo, si deseas honrar a Martina con un detalle,
+                    una contribución para su futuro viaje será muy apreciada.
+                </p>
+                <div class="w-full space-y-4">
+                    <div
+                        class="p-5 rounded-lg bg-white/40 border border-white/60 flex justify-between items-center shadow-sm backdrop-blur-md">
+                        <div class="text-left">
+                            <p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">
+                                ALIAS / CBU</p>
+                            <p class="font-body-md text-body-md font-bold text-on-surface">MARTINA.XV.DREAMS</p>
+                        </div>
+                        <button class="p-3 text-primary hover:bg-primary-container/40 rounded-full transition-colors">
+                            <span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+                        </button>
+                    </div>
+                    <p class="text-label-sm font-label-sm text-on-surface-variant italic">Banco: Serenity Reserve
+                        National</p>
+                </div>
+            </section>
+        </div>
+        <!-- RSVP Form Section -->
+        <section class="glass-card rounded-xl p-8 md:p-12 shadow-ethereal max-w-3xl mx-auto relative mt-12" id="RSVP">
+            <div
+                class="absolute -top-6 left-1/2 -translate-x-1/2 bg-primary text-white px-10 py-3 rounded-full font-label-lg text-label-lg tracking-widest butterfly-glow z-10">
+                CONFIRMAR
+            </div>
+            <div class="text-center mb-12 pt-6">
+                <h2
+                    class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">
+                    ¿Nos acompañarás?</h2>
+                <p class="text-on-surface-variant mt-2 font-medium">Por favor confirma tu asistencia antes del 15 de
+                    Septiembre</p>
+            </div>
+            <form class="space-y-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="relative">
+                        <input
+                            class="peer w-full bg-transparent border-0 border-b-2 border-primary/40 py-3 px-0 text-on-surface focus:ring-0 focus:border-primary transition-colors placeholder-transparent"
+                            id="name" placeholder=" " type="text" />
+                        <label
+                            class="absolute left-0 top-3 text-on-surface-variant duration-300 transform -translate-y-6 scale-75 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-primary font-semibold"
+                            for="name">Nombre Completo</label>
+                    </div>
+                    <div class="relative">
+                        <input
+                            class="peer w-full bg-transparent border-0 border-b-2 border-primary/40 py-3 px-0 text-on-surface focus:ring-0 focus:border-primary transition-colors placeholder-transparent"
+                            id="email" placeholder=" " type="email" />
+                        <label
+                            class="absolute left-0 top-3 text-on-surface-variant duration-300 transform -translate-y-6 scale-75 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-primary font-semibold"
+                            for="email">Correo Electrónico</label>
+                    </div>
+                </div>
+                <div class="space-y-5">
+                    <p class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Asistencia
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <label class="flex-1 min-w-[140px] cursor-pointer group">
+                            <input checked="" class="hidden peer" name="attendance" type="radio" />
+                            <div
+                                class="flex flex-col items-center p-5 rounded-xl border-2 border-white/40 bg-white/20 peer-checked:border-primary peer-checked:bg-white/80 transition-all shadow-sm group-hover:bg-white/30 backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-primary mb-2 !text-3xl"
+                                    data-icon="check_circle">check_circle</span>
+                                <span class="font-label-lg text-label-lg text-on-surface">Asistiré con gusto</span>
+                            </div>
+                        </label>
+                        <label class="flex-1 min-w-[140px] cursor-pointer group">
+                            <input class="hidden peer" name="attendance" type="radio" />
+                            <div
+                                class="flex flex-col items-center p-5 rounded-xl border-2 border-white/40 bg-white/20 peer-checked:border-primary peer-checked:bg-white/80 transition-all shadow-sm group-hover:bg-white/30 backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-on-surface-variant mb-2 !text-3xl"
+                                    data-icon="cancel">cancel</span>
+                                <span class="font-label-lg text-label-lg text-on-surface">No podré asistir</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="space-y-5">
+                    <p class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Peticiones
+                        Especiales</p>
+                    <textarea
+                        class="w-full bg-white/20 border-2 border-white/40 rounded-xl p-5 focus:ring-1 focus:ring-primary focus:border-primary text-on-surface transition-all h-36 placeholder:text-on-surface-variant/60 shadow-inner backdrop-blur-sm"
+                        placeholder="Restricciones alimentarias o notas especiales..."></textarea>
+                </div>
+                <button
+                    class="w-full py-5 rounded-full bg-primary text-white font-label-lg text-headline-md tracking-widest shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-300"
+                    type="submit">
+                    CONFIRMAR ASISTENCIA
+                </button>
+            </form>
+        </section>
+
+        <svg width="190" height="195" viewBox="0 0 190 195" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="190" height="195" fill="url(#pattern0_1_7)" />
+            <defs>
+                <pattern id="pattern0_1_7" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_1_7" transform="matrix(0.00526316 0 0 0.00512821 -0.000976036 0.000568797)" />
+                </pattern>
+                <image id="image0_1_7" width="190" height="195" preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,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" />
+            </defs>
+        </svg>
+
+        <svg width="65" height="55" viewBox="0 0 65 55" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="65" height="55" fill="url(#pattern0_1_11)" />
+            <defs>
+                <pattern id="pattern0_1_11" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_1_11" transform="scale(0.0153846 0.0181818)" />
+                </pattern>
+                <image id="image0_1_11" width="65" height="55" preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,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" />
+            </defs>
+        </svg>
+
+        <svg width="44" height="43" viewBox="0 0 44 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="44" height="43" fill="url(#pattern0_1_14)" />
+            <defs>
+                <pattern id="pattern0_1_14" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_1_14" transform="scale(0.0227273 0.0232558)" />
+                </pattern>
+                <image id="image0_1_14" width="44" height="43" preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAArCAIAAACM4/3uAAAEQUlEQVR4AcSYMUibURDHJe4mg2tR1K3WUN1aUKuTHUxx6qSooItGVOrQSsSgi8WAsUNbMGA61OmjWewUW4V2M6htN0WtYxG0s9D+wpPn87183/cSA5Hj8+7efXf/d3fv3qeBf2X6OT7+PTn5sqHhYXV1rSD4wcEx9L4RAlXl+Flf32hr60wm35+enkl/8On0RlNT69DQ+MXFpdSbTBlAEGN4ePzy8q/pXWiA0tb2ZH//pxDN511BkANimH41DVnp6oq44bgTiJOTs6mpV1o8N5FUueG4E4h4fAnXblFNPcZ9ff1mf5QOgjTYFEKDQl2ArilLB5HJbGq+LEUOERtQjSsAgvDJ5FuekkoHsbPzXXoplslkPquvlAjC7bCprj14OkNdLRGE2eGqUxte3UaJIGzCeNsEg0FpUDEQ9fX3Kgyiru4GAVAqk4mOjsfElqSDoOO2t7/xlBYFmXC4uaDeUhmJ9KiWNyCI3draWVvb1N39jCeXDRrVVOVDoaCWUnXVm+fFSOSpanMNgsuQ2AcHv+QaswiNOeelgZZSqfdlYrEZzSYPgq8S5rm2IMR4/DWrgteepYEgDQMDzzVXgUxm0/syZHVl5Z32GqJWVzQ2lEqtmmaBqalZU6tppqdnzf6gLVpa7muW3mJvb0/B/AW0Me7mhaKYR6az89ZJc3tX6IPBmoJpYDXfE/zyJbDG40uaWcFtaTZSBAHJk6LKBNrbH6myB0/zakWxBxGNjmjHUg0USKXekChV5cHPz99KBjuzaQtsEolFD7cBLpKtrYwlDoYH3/iqO9+2wLPjfFBfMfl8TzCDj45ylnWhM9QODYcfmE5VjeOk2aeqMfk8CLQklnwsLy8AHNGD6NBk8mZseAeIxV7Y9M01CBF1YmKUlPT36xNNrMons0t+LnvEILXmhMYJ3S0IXtAtEKhICWdpd/cLLhALEn/DUJSCS1JJRml5KVZVVRGYv3y4I2EgdgIvDHQQQhsON1OdtbVVRr3QaE9mOY40pSqSA1kpLLmT6WjOSC73lSXIcdI0tchoYRDCHTcNKeGIC1F7si06VP1elQZAp7KIGDBqOdhkhQRLWCxBYBIaLxDYUR1Ms9lP+EVUiaI0NrayRVUp+Gh0FIarkf8IcM+R1FCoBpEiYg968YRBiaUPCCwguo+UMHPgVQIHpGokzwcKVc9mMyRchCRn+AEQhRBPtocNBlYgcB0KBSmn78HBEuLWZcYz2YaGxnhRRKUPAMGqJGoxNzeTTn+0BSHeTCQWzHyIJe3J6SB57JjGAoe2KkVgAa44ELhz/GYwAaLREeYNRwzehooDgUdy6FYUdk/4w8NcIrEIXIwtqWgQ9Nfe3g/NO5ONoXJ+fkR4UGqrvmIRIDj09DynTn6U0x9cN2xd1N43mJuBLQgOEuHpeRzxqShic14YSiVsHScq2YIgEm1Mw19d/XGcdFliSxz/AQAA///XzZ2jAAAABklEQVQDAPYgQVHYLHvTAAAAAElFTkSuQmCC" />
+            </defs>
+        </svg>
+        <svg width="41" height="60" viewBox="0 0 41 60" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="41" height="60" fill="url(#pattern0_1_17)" />
+            <defs>
+                <pattern id="pattern0_1_17" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_1_17" transform="scale(0.0243902 0.0166667)" />
+                </pattern>
+                <image id="image0_1_17" width="41" height="60" preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAA8CAIAAAB0GQSJAAAErElEQVR4AdyYv08UQRTHzdpzl0hrNELnj1Ou00T5UUkBhIrqCJCohUICkUZzCRtoIBzhsBATLuEaaSAuBVSQg4gdBAh2kNxhCwn4D+jnGLPsL+ZmZ7nGy8tm9v36vjfz5s3cGn+u6VcofO/peXvv3pObN2tt4hUmokAQ40bk397eQXNze0tLRz6/UCr9cvrjFSaihobGjY0tp4hxVOz5+YVksmlz8we+JLS//5MITHPcqRMJG+C+vndOd/KxaU709l7q62Nb1kooYBEWS0DEYqyJfXZ27sxA+FJ8Dg5+KBbLZaGJnc3Onp//VgTzqGFoXiy8Jvb09KzHY6hX1gt9HWwsiR1jbcIcJ8HY7EWmhafwzuoyZh+LV8taFYMoT7wFYFOHF3txgidNg9Koq2tgnEw2dXamRBxRUIUt5RaAXSodCzFPmkY2+4UpYgwtL68CX3I3L/gaVCweB2DLHRGNXEFRGo/HArCZVUX7KGqPHz9wYbP+TCmTHMWpom0i4camslhRReMoarFYTXt7qytvu6ai+FWxBRg1F3Zb20tY1SaSTqeHQXFhDwy8hlVtAvju3duguLBfvHjW3/8KbvUoleqyM3RhA5nJjCFmUA169Oh+JjNqe/ZiI8jlZqqRPcDr6xYtBQhBAdgIMpmxubkZioLxtZAfGLfB2Ai6u7u2twvYMI5Iz58/9WQsHF6JjZhq3NkppNPvGWsTyxcIjEMZNmK6LMU/OTl65055V8BRJ5ZscXGe5bvKpAK2Za1wcg8NfQx7bpLu0dGO6F+a2PSBw8Md9V1HrihjQrrOkhbwzGLx4oYqXr15c4ByPeLCxBWYo+XWrbr6+gYu1UJb/mRpyDWXm6FQAjVHRsbj8Rpb9A+bcLh68q+ptraeSTbNCfC4JoQ6XVgajmDuWNy6SACfAkbkQzLEFI/HBJNnGRvUZLIRS/41wdIjdiNrjO3u7gHAUD7/lTiIhss8r7RSFgIFmwzEoIbKzzZ2Dog7kXi4vm7lcp8SiQeFwhZ59/e/WVrKUzQQTKc+Y+Mabyn8PaOamFhSJAiepjnOVDPnIPnJiMVq/FxtDuVpI5EodUd/hElMfp8Gc+LnanNYOxJ1mtOamAO+Ptgx2VIDmUbPsu39A258VJaTT213dLT6Uzco8rA9y+k3cMw+9vOJwMM0KAcPK/orjcGTenCds0LRwfweAlP3qBmiIXi40V9Jnf0t92PQa2j9a2vfIA55uXYoaTb7Wa5f7ql0A6odoiVxEMkN1KVWpb/pZWzbHUFwEHEccVfh2E+lumyRxoDtI592FzYA7AR6YTo9zLHvqVWkYUnuwYvt9E7gzleNsSa23EwxjmLx8hOG30SWt187LEc+c/8vtnzHVjdvjnDJMl2JTauRmCmK+KAj0bwSG5vonyHkCciwaTJEoE1cSWhQEnMZNlFHOV1ojhJgRDJsxFNTY/JaRSeQCJpbYqDIZlbAplA5ZG1txQH/E1SuoBWwASP8UN8gAOZiypmErZwqY2MPPN8gmEbGcuLw5XOBCjB+lLDR42gnG+42HOr+CiBXULn/VKwvXNmkii0MqHz+apyeHgFDHIJOTg7JFVTiE2qKz78AAAD//5W6lAkAAAAGSURBVAMAYQ1qZZ/qfqEAAAAASUVORK5CYII=" />
+            </defs>
+        </svg>
+
+
+
+
+    </main>
+    <!-- Bottom Navigation Shell (Mobile Only) -->
+    <nav
+        class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-3 px-gutter bg-white/40 backdrop-blur-2xl border-t border-white/20 shadow-[0_-8px_32px_rgba(0,79,80,0.05)] z-50 rounded-t-2xl">
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+            href="#Home">
+            <span class="material-symbols-outlined" data-icon="home">home</span>
+            <span class="font-label-sm text-label-sm">Inicio</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+            href="#Event">
+            <span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+            <span class="font-label-sm text-label-sm">Evento</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-primary bg-primary/10 rounded-full px-5 py-1.5"
+            href="#RSVP">
+            <span class="material-symbols-outlined font-bold" data-icon="how_to_reg">how_to_reg</span>
+            <span class="font-label-sm text-label-sm font-bold">Confirmar</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+            href="#Dress">
+            <span class="material-symbols-outlined" data-icon="apparel">apparel</span>
+            <span class="font-label-sm text-label-sm">Vestimenta</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+            href="#Gifts">
+            <span class="material-symbols-outlined"
+                data-icon="featured_seasonal_and_gifts">featured_seasonal_and_gifts</span>
+            <span class="font-label-sm text-label-sm">Regalos</span>
+        </a>
+    </nav>
+    <!-- Floating Action Button (Only for RSVP context) -->
+    <button
+        class="fixed bottom-24 right-6 w-16 h-16 rounded-full bg-primary text-white shadow-lg flex items-center justify-center z-40 md:bottom-12 md:right-12 hover:scale-110 active:scale-95 transition-all">
+        <span class="material-symbols-outlined !text-3xl" data-icon="edit" data-weight="fill">edit</span>
+    </button>
+</body>
+
+</html>
