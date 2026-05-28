@@ -1,6 +1,6 @@
 
-// Configuramos una fecha objetivo (Ejemplo: 8 días a partir de hoy para pruebas)
-const targetDate = new Date().getTime() + (8 * 24 * 60 * 60 * 1000);
+// Configuramos una fecha objetivo (22 de agosto de 2026)
+const targetDate = new Date(2026, 7, 22, 0, 0, 0, 0).getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
